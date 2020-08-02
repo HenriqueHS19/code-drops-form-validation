@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <form>
+
+            <h3> Register now </h3>
+
+            <div class="input-group">
+                <input type="text" required />
+                <label> Name </label>
+                <span class="error"></span>
+            </div>
+
+            <div class="input-group">
+                <input type="email" required />
+                <label> E-mail </label>
+                <span class="error"></span>
+            </div>
+
+            <button type="submit"> Register </button>
+        </form>
+    </div>
+</body>
+</html>

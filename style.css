@@ -1,0 +1,109 @@
+:root {
+    --primary-color: #cfd9db;;
+    --bg-color: #1b2b34;
+    --text-color: #2b3e51;
+    --light-color: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: var(--text-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 600px;
+    background: var(--light-color);
+    border-radius: 4px;
+    margin: 0 auto;
+    padding: 40px 64px;
+}
+
+.container form {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+.container form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 42px;
+}
+
+.container form .input-group {
+    width: 100%;
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.container form .input-group input {
+    width: 100%;
+    background: transparent;
+    padding: 16px 15px;
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border .4s;
+}
+.container form .input-group input:focus {
+    border-color: var(--bg-color);
+}
+
+.container form .input-group label {
+    position: absolute;
+    top: 16px;
+    left: 15px;
+    color: var(--text-color);
+    transition: .4s;
+}
+.container form .input-group input:focus ~ label, .container form .input-group input:valid ~ label {
+    transform: translateY(-35px);
+    left: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+}
+
+/* class error of span  */
+.container form .input-group span.error {
+    display: flex;
+    padding: 0;
+    background-color: rgba(255, 0, 0, 0.2);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--bg-color);
+}
+
+.container form .input-group span.error.active {
+    border: 1px solid red;
+    padding: 0.4em;
+}
+
+.container form button {
+    background: var(--bg-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--light-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 16px 0;
+    margin-top: 16px;
+    cursor: pointer;
+}
